@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1485466394 source:/home/wagner/Documents/Projetos C/TADPilha/main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1485465999 /home/wagner/Documents/Projetos C/TADPilha/stack.h
+
+1485466407 source:/home/wagner/Documents/Projetos C/TADPilha/stack.c
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+

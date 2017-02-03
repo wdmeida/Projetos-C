@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1486036917 source:/home/wagner/Documents/Projetos C/ListaEncadeada/lista.c
+	<stdlib.h>
+	<stdio.h>
+	"lista.h"
+
+1486035279 /home/wagner/Documents/Projetos C/ListaEncadeada/lista.h
+
+1486036815 source:/home/wagner/Documents/Projetos C/ListaEncadeada/main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+

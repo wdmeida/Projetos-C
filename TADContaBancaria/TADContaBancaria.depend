@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1484776148 source:/home/wagner/Documents/Projetos C/TADContaBancaria/main.c
+	<stdio.h>
+	<stdlib.h>
+	"conta_bancaria.h"
+
+1484776265 /home/wagner/Documents/Projetos C/TADContaBancaria/conta_bancaria.h
+
+1484776265 source:/home/wagner/Documents/Projetos C/TADContaBancaria/conta_bancaria.c
+	<stdio.h>
+	<stdlib.h>
+	"conta_bancaria.h"
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1485387633 source:/home/wagner/Documents/Projetos C/Exercicios_Recursao/main.c
+	<stdio.h>
+	<stdlib.h>
+

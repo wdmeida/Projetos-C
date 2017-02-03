@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1484777337 source:/home/wagner/Documents/Projetos C/TADJogadorDeFutebol/JogadorDeFutebol.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"JogadorDeFutebol.h"
+
+1484777480 /home/wagner/Documents/Projetos C/TADJogadorDeFutebol/JogadorDeFutebol.h
+
+1484777387 source:/home/wagner/Documents/Projetos C/TADJogadorDeFutebol/main.c
+	<stdio.h>
+	<stdlib.h>
+	"JogadorDeFutebol.h"
+

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1484772160 source:/home/wagner/Documents/Projetos C/AlocacaoDinamica/exemplo.c
+	<stdio.h>
+	<stdlib.h>
+
+1484768622 source:/home/wagner/Documents/Projetos C/AlocacaoDinamica/main.c
+	<stdlib.h>
+

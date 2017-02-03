@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1485818154 source:/home/wagner/Documents/Projetos C/Queue/queue.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+
+1485817870 /home/wagner/Documents/Projetos C/Queue/queue.h
+
+1485818028 source:/home/wagner/Documents/Projetos C/Queue/main.c
+	<stdio.h>
+	<stdlib.h>
+	"queue.h"
+
