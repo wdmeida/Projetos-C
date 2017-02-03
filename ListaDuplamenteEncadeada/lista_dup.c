@@ -14,9 +14,11 @@ Lista cria_lista() {
 }//cria_lista()
 
 //Inserir
+
+//Criado apenas para relembrar os conceitos, na prática, pode ser feito com apenas um método.
 int inserir_lista_vazia(Lista l, Elemento e) {
 
-    TNodo novo = (TNodo*) malloc(sizeof(TNodo));
+    TNodo *novo = (TNodo*) malloc(sizeof(TNodo));
 
     if(!novo) return 0;
 
@@ -115,11 +117,11 @@ int inserir_lista_apos(Lista l, Elemento e, int pos) {
 }
 
 //Remover
-int remove_lista(Lista l, Elemento e, int pos) {
+int remove_lista(Lista l, Elemento *e, int pos) {
     int i;
     TNodo *atual, *remover;
 
-    if (l->tamanho == 0) return ;
+    if (l->tamanho == 0) return 0;
 
     /* Remoção na primeira posição; */
     if (pos == 1)
@@ -152,6 +154,33 @@ int remove_lista(Lista l, Elemento e, int pos) {
     free(remover);
     l->tamanho--;
     return 1;
+}
+
+
+void imprime_inicio(Lista l){
+    TNodo *aux;
+    aux = l->pPrimeiro;
+
+    int cont = 1;
+
+    while(aux != NULL){
+        printf("\nElemento %d da lista: %d", cont, aux->elemento.chave);
+        aux = aux->pProximo;
+        cont++;
+    }
+}
+
+void imprime_fim(Lista l) {
+        TNodo *aux;
+    aux = l->pUltimo;
+
+    int cont = 1;
+
+    while(aux != NULL){
+        printf("\nElemento %d da lista: %d", cont, aux->elemento.chave);
+        aux = aux->pAnterior;
+        cont++;
+    }
 }
 
 void termina_lista(Lista l) {

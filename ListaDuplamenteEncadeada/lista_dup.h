@@ -28,6 +28,9 @@ int inserir_lista_antes(Lista, Elemento, int);
 int inserir_lista_apos(Lista, Elemento, int);
 
 //Retirar na lista.
-int remove_lista(Lista, Elemento, int);
+int remove_lista(Lista, Elemento*, int);
+
+void imprime_inicio(Lista);
+void imprime_fim(Lista);
 
 #endif // LISTA_DUP_H_INCLUDED

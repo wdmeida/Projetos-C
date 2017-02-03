@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1486123822 source:/home/wagner/Documents/Projetos C/ListaDuplamenteEncadeada/lista_dup.c
+	<stdlib.h>
+	<stdio.h>
+	"lista_dup.h"
+
+1486123669 /home/wagner/Documents/Projetos C/ListaDuplamenteEncadeada/lista_dup.h
+
