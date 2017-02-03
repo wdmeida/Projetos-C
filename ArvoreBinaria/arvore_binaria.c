@@ -11,7 +11,7 @@ int insere_recursivo(Arvore *arvore, Elemento e) {
     if(!*arvore) {
 
         (*arvore) = (Arvore) malloc(sizeof(TNodo));
-        (*arvore)->pEquerda = NULL;
+        (*arvore)->pEsquerda = NULL;
         (*arvore)->pDireita = NULL;
         (*arvore)->info = e;
 
@@ -54,8 +54,18 @@ int altura_arvore(Arvore arvore) {
 
     int arv_esq = altura_arvore(arvore->pEsquerda),
         arv_dir = altura_arvore(arvore->pDireita);
+
     return arv_esq < arv_dir ? arv_dir + 1 : arv_esq + 1;
 }//altura_arvore()
+
+
+int eh_vazia(Arvore arvore){
+    return arvore == NULL;
+}//eh_vazia()
+
+int quantidade_nos(Arvore arvore) {
+    return !arvore ? 0 : (1 + quantidade_nos(arvore->pEsquerda) + quantidade_nos(arvore->pDireita));
+}
 
 void in_ordem(Arvore arvore) {
     if(arvore) {
@@ -65,10 +75,26 @@ void in_ordem(Arvore arvore) {
     }
 }//in_ordem()
 
-void Libera_memoria_arvore(Arvore arvore){
+void pos_ordem(Arvore arvore) {
+    if(arvore) {
+        pos_ordem(arvore->pEsquerda);
+        pos_ordem(arvore->pDireita);
+        printf("\n\t%d\n", arvore->info.chave);
+    }
+}//pos_ordem()
+
+void pre_ordem(Arvore arvore) {
+    if(arvore) {
+        printf("\n\t%d\n", arvore->info.chave);
+        pre_ordem(arvore->pEsquerda);
+        pre_ordem(arvore->pDireita);
+    }
+}//pre_ordem()
+
+void libera_memoria_arvore(Arvore arvore){
     if(arvore){
-        Libera_memoria_arvore(arvore->pEsquerda);
-        Libera_memoria_arvore(arvore->pDireita);
+        libera_memoria_arvore(arvore->pEsquerda);
+        libera_memoria_arvore(arvore->pDireita);
         free(arvore);
     }
 }
@@ -86,4 +112,4 @@ int procura_recursivo(Arvore arvore, Elemento *e, int chave) {
                procura_recursivo(arvore->pDireita, e, chave);
 }//procura_recursivo()
 
-int procura_sem_recursao(Arvore arvore, Elemento *e, int chave);
+int procura_sem_recursao(Arvore arvore, Elemento *e, int chave) { return 0; }//procura_sem_recursao()
