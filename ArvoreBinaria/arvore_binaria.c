@@ -49,6 +49,46 @@ int insere_sem_recursao(Arvore *arvore, Elemento e) {
     return 1;
 }//insere_sem_recursao()
 
+
+int remover_recursivo(Arvore*, Elemento*);
+
+int remover_sem_recursao(Arvore* arvore, Elemento* e) {
+    Arvore *percorre, *aux;
+    percorre = arvore;
+
+    while(*percorre){
+        if (e->chave > (*percorre)->info.chave)
+            percorre = &(*percorre)->pDireita;
+        else if (e->chave < (*percorre))
+            percorre = &(*percorre)->pEsquerda;
+        else
+        {
+
+            aux = &(*percorre);
+
+            if (!(*percorre)->pDireita)
+                *percorre = (*percorre)->pEsquerda;
+            else if (!(*percorre)->pEsquerda)
+                *percorre = (*percorre)->pDireita;
+            else
+            {
+                percorre = &(*aux)->pEsquerda;
+                while((*percorre)->pDireita){
+                    percorre = &(*percorre)->pDireita;
+                }
+                (*aux)->info = (*percorre)->info;
+                *aux = *p;
+                *percorre = (*percorre)->pEsquerda;
+            }
+            free(aux);
+        }else
+            return 0;
+    }
+
+    return 1;
+}//remover_sem_recursao()
+
+
 int altura_arvore(Arvore arvore) {
     if(!arvore) return -1;
 

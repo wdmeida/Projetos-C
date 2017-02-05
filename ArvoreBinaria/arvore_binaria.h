@@ -19,6 +19,8 @@ int insere_recursivo(Arvore*, Elemento);
 int insere_sem_recursao(Arvore*, Elemento);
 
 //Remoção.
+int remover_recursivo(Arvore*, Elemento*);
+int remover_sem_recursao(Arvore*, Elemento*);
 
 //Auxiliares.
 int altura_arvore(Arvore);
