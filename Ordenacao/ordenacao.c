@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 #include "ordenacao.h"
 
 //Compara elementos adjacentes e os troca de lugar se
@@ -82,3 +83,121 @@ void selection_sort(int *v, int tamanho) {
         }
     }
 }//selection_sort()
+
+
+
+//Dividir e conquistar.
+//Divide, recursivamente, o conjunto de dados até que cada subconjunto possua 1 elemento.
+//Combina 2 subconjuntos de forma a obter 1 conjunto maior e ordenado.
+//Esse processo se repete até que exista apenas 1 conjunto.
+
+/*
+    Melhor Caso: O(N log N)
+    Pior Caso: O(N log N)
+    Estável: Não altera a ordem de dados iguais.
+    Desvantagens: recursivo e usa um vetor auxiliar durante a ordenação.
+*/
+void merge_sort(int *v, int inicio, int fim) {
+    int meio;
+
+    if(inicio < fim) {
+        meio = floor((inicio + fim) / 2);
+        //Chama a função para as duas metades.
+        merge_sort(v, inicio, meio);
+        merge_sort(v, meio + 1, fim);
+
+        //Combina as 2 metades ordenadas.
+        merge_etp(v, inicio, meio, fim);
+    }
+}//merge_sort()
+
+void merge_etp(int *v, int inicio, int meio, int fim) {
+    int *temp, p1, p2, tamanho, i, j, k;
+
+    int fim1 = 0, fim2 = 0;
+    tamanho = fim - inicio + 1;
+
+    p1 = inicio;
+    p2 = meio + 1;
+
+    temp = (int*) malloc(sizeof(tamanho * sizeof(int)));
+
+    if(temp != NULL) {
+        for (i = 0; i < tamanho; i++) {
+            if(!fim1 && !fim2) {
+                if(v[p1] < p[p2])
+                    temp[i] = v[p1++];
+                else
+                    temp[i] = v[p2++];
+
+                if(p1 > meio) fim1 = 1;
+                if(p2 > meio) fim2 = 1;
+            }
+            else
+            {
+                if(!fim1)
+                    temp[i] = v[p1++];
+                else
+                    temp[i] = v[p2++];
+            }
+        }//for()
+
+        for (j = 0, k = inicio; j < tamanho; j++, k++)
+            v[k] = temp[j];
+    }
+    free(temp);
+}//merge()
+
+
+//Idéia básica: Dividir e Conquistar.
+//Um elemento é escolhido como pivô.
+//Particionar: Os dados são rearranjados (valores menores do que o pivô são
+//colocados antes dele e os maiores, depois.
+//Recursivamente ordena as 2 partições.
+
+/*
+    Melhor Caso: O(N log N)
+    Pior Caso (raro): O(N^2)
+    Estável: Altera a ordem de dados iguais, pode ser modificado para ser estável.
+    Desvantagens: Como escolher um bom pivô?
+*/
+void quick_sort(int *v, int inicio, int fim) {
+    int pivo;
+
+    if(fim > inicio) {
+        pivo = particiona(v, inicio, fim);
+        quick_sort(v, inicio, pivo + 1);
+        quick_sort(v, pivo + 1, fim);
+    }
+}//quick_sort()
+
+int particiona(int *v, int inicio, int fim) {
+    int esq, dir, pivo, aux;
+
+    esq = inicio;
+    dir = fim;
+    pivo = v[inicio];
+
+    while (esq < dir) {
+        //Avança a posição da esquerda.
+        while(v[esq] <= pivo) esq++;
+
+        //Avança a posição da direita.
+        while(v[dir] > pivo) dir--;
+
+        //Troca esq e dir.
+        if (esq < dir) {
+            aux = v[esq];
+            v[esq] = v[dir];
+            v[dir] = aux;
+        }
+    }
+    v[inicio] = v[dir];
+    v[dir] = pivo;
+    return dir;
+}//particiona()
+
+
+//Heap: vetor que simula uma árvore binária completa (exceção do último nível).
+//Todo elemento pai do vetor possui dois elementos como filhos.
+//"pai" (i) -> "filhos": (2 * i + 1) e (2 * i + 2).
