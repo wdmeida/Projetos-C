@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1486314552 source:/home/wagner/Documents/Projetos C/Ordenacao/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ordenacao.h"
+
+1486314306 /home/wagner/Documents/Projetos C/Ordenacao/ordenacao.h
+
+1486314675 source:/home/wagner/Documents/Projetos C/Ordenacao/ordenacao.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"ordenacao.h"
+

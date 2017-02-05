@@ -45,7 +45,7 @@ void insection_sort(int *v, int tamanho) {
     int i, j, aux;
 
     for (i = 1; i < tamanho; i++) {
-        aux = V[i];
+        aux = v[i];
 
         for (j = i; (j > 0) && (aux < v[j - 1]); j--)
             v[j] = v[j - 1];
@@ -107,11 +107,11 @@ void merge_sort(int *v, int inicio, int fim) {
         merge_sort(v, meio + 1, fim);
 
         //Combina as 2 metades ordenadas.
-        merge_etp(v, inicio, meio, fim);
+        etapa_merge(v, inicio, meio, fim);
     }
 }//merge_sort()
 
-void merge_etp(int *v, int inicio, int meio, int fim) {
+void etapa_merge(int *v, int inicio, int meio, int fim) {
     int *temp, p1, p2, tamanho, i, j, k;
 
     int fim1 = 0, fim2 = 0;
@@ -125,7 +125,7 @@ void merge_etp(int *v, int inicio, int meio, int fim) {
     if(temp != NULL) {
         for (i = 0; i < tamanho; i++) {
             if(!fim1 && !fim2) {
-                if(v[p1] < p[p2])
+                if(v[p1] < v[p2])
                     temp[i] = v[p1++];
                 else
                     temp[i] = v[p2++];
@@ -201,3 +201,50 @@ int particiona(int *v, int inicio, int fim) {
 //Heap: vetor que simula uma árvore binária completa (exceção do último nível).
 //Todo elemento pai do vetor possui dois elementos como filhos.
 //"pai" (i) -> "filhos": (2 * i + 1) e (2 * i + 2).
+
+void heap_sort(int *v, int tamanho) {
+    int i, aux;
+
+    //Criar heap a partir dos dados.
+    for (i = (tamanho - 1) / 2; i >= 0; i--) {
+        cria_heap(v, i, tamanho - 1);
+    }
+
+    for (i = tamanho - 1; i >= 1; i--) {
+        //Pega o maior elemento do heap e coloca na sua posição correspondente no array.
+        aux = v[0];
+        v[0] = v[i];
+        v[i] = aux;
+        //Recontrói o heap.
+        cria_heap(v, 0, i - 1);
+    }
+}//heap_sort()
+
+void cria_heap(int *v, int inicio, int fim) {
+    int aux = v[inicio];
+
+    //Cálcula um dos filhos.
+    int j = inicio * 2 + 1;
+
+    while (j <= fim) {
+        //Verifica se o pai tem 2 filhos e quem é maior.
+        if (j < fim) {
+            //Compara os dois filhos.
+            if (v[j] < v[j + 1]) {
+                j = j + 1;
+            }
+        }
+        //Caso o filho for maior que o pai, ele se torna o pai.
+        if (aux < v[j]) {
+            v[inicio] = v[j];
+            inicio = j;
+            j = 2 * inicio + 1;
+        }
+        else
+        {
+            j = fim + 1;
+        }
+    }
+    //Antigo pai ocupa o lugar do último filho analisado.
+    v[inicio] = aux;
+}//cria_heap()

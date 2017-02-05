@@ -8,8 +8,13 @@ void selection_sort(int *v, int tamanho);
 
 //Algoritmos sofisticados de ordenação.
 void merge_sort(int *v, int inicio, int fim);
-void etp_merge(int *v, int inicio, int meio, int fim);
+void etapa_merge(int *v, int inicio, int meio, int fim);
+
 void quick_sort(int *v, int inicio, int fim);
 int particiona(int *v, int inicio, int fim);
+
+void heap_sort(int *v, int tamanho);
+void cria_heap(int *v, int inicio, int fim);
+
 
 #endif // ORDENACAO_H_INCLUDED
