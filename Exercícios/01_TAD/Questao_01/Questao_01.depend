@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1486427398 source:/home/wagner/Documents/Projetos C/Exercícios/01_TAD/Questao_01/calculo_salarial.c
+	<stdlib.h>
+	<stdio.h>
+	"calculo_salarial.h"
+
+1486427472 /home/wagner/Documents/Projetos C/Exercícios/01_TAD/Questao_01/calculo_salarial.h
+
+1486426425 source:/home/wagner/Documents/Projetos C/Exercícios/01_TAD/Questao_01/main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculo_salarial.h"
+
