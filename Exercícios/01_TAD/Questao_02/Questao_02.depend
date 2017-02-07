@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1486470492 source:/home/wagner/Documents/Projetos C/Exercícios/01_TAD/Questao_02/tad_aluno.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tad_aluno.h"
+
+1486470252 /home/wagner/Documents/Projetos C/Exercícios/01_TAD/Questao_02/tad_aluno.h
+
+1486469065 source:/home/wagner/Documents/Projetos C/Exercícios/01_TAD/Questao_02/main.c
+	<stdio.h>
+	<stdlib.h>
+	"tad_aluno.h"
+
