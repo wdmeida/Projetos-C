@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1486510548 source:/home/wagner/Documents/Projetos C/Exercícios/02_Recursividade/Questao_01/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1486510770 source:/home/wagner/Documents/Projetos C/Exercícios/02_Recursividade/Questao_01/tad_placar.c
+	<stdlib.h>
+	<stdio.h>
+	"tad_placar.h"
+
+1486510708 /home/wagner/Documents/Projetos C/Exercícios/02_Recursividade/Questao_01/tad_placar.h
+

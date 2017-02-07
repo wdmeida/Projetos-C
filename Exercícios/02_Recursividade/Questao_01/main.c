@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "tad_placar.h"
 
 int main()
 {
-    printf("Hello world!\n");
+    inicia_programa();
+
     return 0;
 }
