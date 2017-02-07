@@ -19,6 +19,10 @@ void inicia_programa() {
     //Calcula a média das notas dos alunos.
     calcula_media(alunos, quantidade);
 
+    //Exibe o melhor e o pior aluno.
+    relatorio_final(obtem_aluno_criterio(alunos, quantidade, PIOR_ALUNO),
+                    obtem_aluno_criterio(alunos, quantidade, MELHOR_ALUNO));
+
     //Libera a memória alocada.
     free(alunos);
 }//inicia_programa
@@ -46,19 +50,43 @@ void calcula_media(Aluno* alunos, int quantidade) {
     for (cont = 0; cont < quantidade; cont++) {
         alunos[cont].media = (float) (alunos[cont].nota1 + alunos[cont].nota2 + alunos[cont].nota3 + alunos[cont].nota4) / 4;
         printf("%.2f", alunos[cont].media);
-        imprime(alunos[cont]);
+        imprime_informacao_aluno(alunos[cont]);
     }
 }
 
-void verifica_status_alunos(Aluno* alunos, int quantidade) {
+Aluno obtem_aluno_criterio(Aluno* alunos, int quantidade, int criterio) {
+    Aluno aluno = alunos[0];
 
-}//
+    int cont;
+
+    switch(criterio){
+        case MELHOR_ALUNO:
+            for (cont = 1; cont < quantidade; cont++){
+                if(alunos[cont].media > aluno.media)
+                    aluno = alunos[cont];
+            }
+        break;
+
+        case PIOR_ALUNO:
+            for (cont = 1; cont < quantidade; cont++){
+                if(alunos[cont].media < aluno.media)
+                    aluno = alunos[cont];
+            }
+        break;
+    }
+
+    return aluno;
+}//obtem_aluno_criterio
 
 int valida_nome(Aluno aluno) {
     return 0;
 }
 
-void imprime(Aluno aluno) {
+void imprime_informacao_aluno(Aluno aluno) {
     printf("\nNome.....: %sMedia....: %.2f\nSituacao.:", aluno.nome, aluno.media);
     (aluno.media >= 6) ? printf(" Aprovado") : printf(" Reprovado");
 }//imprime
+
+void relatorio_final(Aluno pior, Aluno melhor) {
+    printf("\n\nMelhor Aluno.: %sPior Aluno...: %s", melhor.nome, pior.nome);
+}//relatorio_final

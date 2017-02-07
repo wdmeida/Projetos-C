@@ -1,5 +1,7 @@
 #ifndef TAD_ALUNO_H_INCLUDED
 #define TAD_ALUNO_H_INCLUDED
+#define PIOR_ALUNO 1
+#define MELHOR_ALUNO 0
 
 typedef struct{
     char nome[50];
@@ -13,8 +15,8 @@ typedef struct{
 void inicia_programa();
 void obtem_informacoes(Aluno*, int);
 void calcula_media(Aluno*, int);
-void verifica_status_alunos(Aluno*, int);
+Aluno obtem_aluno_criterio(Aluno*, int, int);
 int valida_nome(Aluno);
-void imprime(Aluno);
-
+void imprime_informacao_aluno(Aluno);
+void relatorio_final(Aluno, Aluno);
 #endif // TAD_ALUNO_H_INCLUDED
