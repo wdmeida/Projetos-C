@@ -55,7 +55,32 @@ int insere_final(Lista l, TElemento e) {
     return 1;
 }//insere_final()
 
-int insere_posicao(Lista l, int pos, TElemento e);
+int insere_posicao(Lista l, int pos, TElemento e) {
+    if (pos < 1 || pos > tamanho_lista(l)) return 0;
+
+    //Caso seja a primeira posição, utilizada a função pronta do tad..
+    if (pos == 1) return insere_inicio(l,e) ? 1 : 0;
+
+    TNodo *aux = l->pPrimeiro, *anterior;
+    int cont = 1;
+
+    while(cont != pos){
+        anterior = aux;
+        aux = aux->pProximo;
+        cont++;
+    }
+
+    //Aloca memória para um novo nodo.
+    TNodo *novo = (TNodo*) malloc(sizeof(TNodo));
+    if (!novo) return 0;
+
+    novo->elemento = e;
+    novo->pProximo = anterior->pProximo;
+    anterior->pProximo = novo;
+    l->tamanho++;
+
+    return 1;
+}//insere_posicao()
 
 int remove_inicio(Lista l, TElemento* e) {
 
@@ -100,7 +125,29 @@ int remove_final(Lista l, TElemento* e) {
     return 1;
 }//remove_final()
 
-int remove_posicao(Lista l, int pos, TElemento* e);
+int remove_posicao(Lista l, int pos, TElemento* e) {
+    if (lista_vazia(l)) return 0;
+
+    if (pos < 1 || pos > tamanho_lista(l)) return 0;
+
+    //Caso seja a primeira posição, utiliza a função criada no TAD.
+    if (pos == 1) return remove_inicio(l, e) ? 1 : 0;
+
+    TNodo *aux = l->pPrimeiro, *anterior;
+    int cont = 1;
+
+    while (cont < pos) {
+        anterior = aux;
+        aux = aux->pProximo;
+        cont++;
+    }
+
+    *e = aux->elemento;
+    anterior->pProximo = aux->pProximo;
+    free(aux);
+    l->tamanho--;
+    return 1;
+}//remove_posicao()
 
 void imprime(Lista l) {
     TNodo* aux;

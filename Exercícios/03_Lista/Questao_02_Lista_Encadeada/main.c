@@ -42,6 +42,21 @@ int main()
     //Imprime a lista
     imprime(l);
 
+    //Insere por posição.
+    elemento.chave = 29;
+    insere_posicao(l, 2, elemento);
+
+    printf("\nTestando inserir por posicao 2...\n");
+    imprime(l);
+
+    printf("\nTestando remover na posicao 2...\n");
+    remove_posicao(l, 2, &remover);
+    imprime(l);
+
+    printf("\nTestando remover na posicao 2...\n");
+    remove_posicao(l, 2, &remover);
+    imprime(l);
+
     //Libera a memória alocada.
     libera_memoria_lista(l);
     return 0;
