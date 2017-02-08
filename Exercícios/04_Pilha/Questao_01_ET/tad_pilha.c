@@ -61,7 +61,7 @@ void imprime(Pilha p){
     TNodo *aux = p->pTopo;
 
     while(aux != NULL){
-        printf("%s", aux->elemento.chave);
+        printf("%c", aux->elemento.chave);
         aux = aux->pProximo;
     }
 }//imprime()

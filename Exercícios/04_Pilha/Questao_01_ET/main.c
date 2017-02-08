@@ -14,9 +14,10 @@ int main()
 
         if (x.chave == Cancela_Caractere) {
             if (!pilha_vazia(pilha)) pop(pilha, &x);
-        } else if (x.chave == Calcela_Linha)
-            pilha = cria_pilha();
-        else if (x.chave == Salta_Linha)
+        } else if (x.chave == Cancela_Linha) {
+                libera_memoria_alocada(pilha);
+                pilha = cria_pilha();
+        } else if (x.chave == Salta_Linha)
             imprime(pilha);
         else
             push(pilha, x);

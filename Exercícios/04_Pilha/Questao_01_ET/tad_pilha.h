@@ -2,7 +2,7 @@
 #define TAD_PILHA_H_INCLUDED
 #define Cancela_Caractere '#'
 #define Marca_Eof '!'
-#define Calcela_Linha '\'
+#define Cancela_Linha '\\'
 #define Salta_Linha '*'
 
 typedef struct{
