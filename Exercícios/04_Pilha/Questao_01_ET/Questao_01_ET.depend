@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1486586097 source:/home/wagner/Documents/Projetos C/Exercícios/04_Pilha/Questao_01_ET/tad_pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"tad_pilha.h"
+
+1486586570 /home/wagner/Documents/Projetos C/Exercícios/04_Pilha/Questao_01_ET/tad_pilha.h
+
+1486586510 source:/home/wagner/Documents/Projetos C/Exercícios/04_Pilha/Questao_01_ET/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tad_pilha.h"
+
