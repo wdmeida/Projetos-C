@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1486576987 source:/home/wagner/Documents/Projetos C/Exercícios/03_Lista/Questao_02_Lista_Encadeada/tad_lista_encadeada.c
+	<stdlib.h>
+	<stdlib.h>
+	"tad_lista_encadeada.h"
+
+1486575045 /home/wagner/Documents/Projetos C/Exercícios/03_Lista/Questao_02_Lista_Encadeada/tad_lista_encadeada.h
+
+1486576472 source:/home/wagner/Documents/Projetos C/Exercícios/03_Lista/Questao_02_Lista_Encadeada/main.c
+	<stdio.h>
+	<stdlib.h>
+	"tad_lista_encadeada.h"
+
