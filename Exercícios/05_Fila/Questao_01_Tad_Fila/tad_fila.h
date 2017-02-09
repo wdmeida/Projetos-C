@@ -8,7 +8,7 @@ typedef struct{
 
 typedef struct nodo{
     struct nodo *pProximo;
-    TElemento;
+    TElemento elemento;
 }TNodo;
 
 typedef struct{
@@ -23,6 +23,7 @@ int tamanho_fila(Fila);
 int fila_vazia(Fila);
 int enfileira(Fila, TElemento);
 int desenfileira(Fila, TElemento*);
+void imprime(Fila);
 void libera_memoria_alocada(Fila);
 
 
