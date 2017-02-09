@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1486675249 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_02_Merge_Sort/main.c
+	<stdio.h>
+	<stdlib.h>
+	"merge.h"
+	<math.h>
+
+1486675300 /home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_02_Merge_Sort/merge.h
+
+1486675419 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_02_Merge_Sort/merge.c
+	<stdio.h>
+	<stdlib.h>
+	"merge.h"
+

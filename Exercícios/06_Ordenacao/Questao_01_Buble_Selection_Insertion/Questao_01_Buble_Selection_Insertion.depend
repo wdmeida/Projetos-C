@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1486643863 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_01_Buble_Selection_Insertion/ordenacao.c
+1486667395 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_01_Buble_Selection_Insertion/ordenacao.c
 	<stdlib.h>
 	<stdio.h>
 	"ordenacao.h"
 
-1486643823 /home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_01_Buble_Selection_Insertion/ordenacao.h
+1486661906 /home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_01_Buble_Selection_Insertion/ordenacao.h
 
-1486643932 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_01_Buble_Selection_Insertion/main.c
+1486667182 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_01_Buble_Selection_Insertion/main.c
 	<stdio.h>
 	<stdlib.h>
 	"ordenacao.h"
