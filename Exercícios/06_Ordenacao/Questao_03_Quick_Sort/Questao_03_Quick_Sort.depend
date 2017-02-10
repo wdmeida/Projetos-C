@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1486685849 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_03_Quick_Sort/quick_sort.c
+	<stdlib.h>
+	<stdio.h>
+	"quick_sort.h"
+
+1486685816 /home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_03_Quick_Sort/quick_sort.h
+
+1486685889 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_03_Quick_Sort/main.c
+	<stdio.h>
+	<stdlib.h>
+	"quick_sort.h"
+
