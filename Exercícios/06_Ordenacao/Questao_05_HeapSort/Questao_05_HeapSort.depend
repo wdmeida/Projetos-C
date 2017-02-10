@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1486695293 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_05_HeapSort/heap_sort.c
+	<stdio.h>
+	<stdlib.h>
+	"heap_sort.h"
+
+1486692363 /home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_05_HeapSort/heap_sort.h
+
+1486695277 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_05_HeapSort/main.c
+	<stdio.h>
+	<stdlib.h>
+	"heap_sort.h"
+

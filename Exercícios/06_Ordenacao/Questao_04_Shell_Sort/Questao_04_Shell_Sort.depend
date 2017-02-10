@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1486690732 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_04_Shell_Sort/main.c
+	<stdio.h>
+	<stdlib.h>
+	"shell_sort.h"
+
+1486690191 /home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_04_Shell_Sort/shell_sort.h
+
+1486690745 source:/home/wagner/Documents/Projetos C/Exercícios/06_Ordenacao/Questao_04_Shell_Sort/shell_sort.c
+	<stdio.h>
+	<stdlib.h>
+	"shell_sort.h"
+
