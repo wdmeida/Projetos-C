@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1486750541 source:/home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_02_Pesquisa_Binária/dicionario.c
+	<stdio.h>
+	<stdlib.h>
+	"dicionario.h"
+
+1486750533 /home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_02_Pesquisa_Binária/dicionario.h
+
