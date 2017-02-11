@@ -17,7 +17,10 @@ typedef struct celula{
 
 typedef struct{
     TCelula *pPrimeiro, *pUltimo;
+    int tamanho;
 }TLista;
+
+typedef TLista *Lista;
 
 typedef struct {
     int n; //número de itens na hash.
@@ -27,13 +30,22 @@ typedef struct {
     TLista *v; //array de listas.
 }THash;
 
+//TAD Tabela Hash
 void THash_Inicia(THash*, int, int);
 int THash_H(THash*, TChave);
 int THash_Pesquisa(THash*, TChave, TItem*);
 TCelula *THash_Pesquisa_Celula(THash*, TChave);
 int THash_Insere(THash*, TItem);
-int THash_Remove(THash*, TItem);
+int THash_Remove(THash*, TItem*);
+void THash_Termina(THash*);
 
-void GeraPesos(int*, int);
+//TAD Lista.
+void TLista_Inicia(Lista);
+int TLista_Insere(Lista, TItem);
+int TLista_Remove(Lista, TCelula*, TItem*);
+int TLista_EhVazia(Lista);
+int TLista_Remove_Inicio(Lista, TItem*);
+int TLista_Remove_Final(Lista, TItem*);
+void TLista_Termina(Lista);
 
 #endif // HASHING_H_INCLUDED

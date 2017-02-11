@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1486779984 source:/home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_05_Hashing/main.c
+	<stdio.h>
+	<stdlib.h>
+
