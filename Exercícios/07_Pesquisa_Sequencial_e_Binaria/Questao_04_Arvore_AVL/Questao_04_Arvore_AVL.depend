@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1486775894 source:/home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_04_Arvore_AVL/arvore_avl.c
+	<stdio.h>
+	<stdlib.h>
+	"arvore_avl.h"
+
+1486775795 /home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_04_Arvore_AVL/arvore_avl.h
+
+1486770097 source:/home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_04_Arvore_AVL/main.c
+	<stdio.h>
+	<stdlib.h>
+

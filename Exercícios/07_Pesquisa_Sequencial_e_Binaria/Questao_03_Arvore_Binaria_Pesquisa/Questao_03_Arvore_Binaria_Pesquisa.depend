@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1486769951 source:/home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_03_Arvore_Binaria_Pesquisa/arvore_binaria_pesquisa.c
+	<stdlib.h>
+	<stdio.h>
+	"arvore_binaria_pesquisa.h"
+
+1486769548 /home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_03_Arvore_Binaria_Pesquisa/arvore_binaria_pesquisa.h
+
+1486769558 source:/home/wagner/Documents/Projetos C/Exercícios/07_Pesquisa_Sequencial_e_Binaria/Questao_03_Arvore_Binaria_Pesquisa/main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvore_binaria_pesquisa.h"
+
