@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1486831290 source:/home/wagner/Documents/Projetos C/Exercícios/02_Recursividade/ListaExercicios/main.c
+	<stdio.h>
+	<stdlib.h>
+
